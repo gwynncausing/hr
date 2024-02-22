@@ -20,6 +20,8 @@ yarn install
 bun install
 ```
 
+Pinia will have an error, use `npm i pinia -f` to resolve
+
 ## Development Server
 
 Start the development server on `http://localhost:3000`:
