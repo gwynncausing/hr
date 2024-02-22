@@ -21,7 +21,7 @@
         </ClientOnly>
       </div>
     </nav>
-  <div class="py-2 px-4">
+  <div class="p-4">
     <slot />
   </div>
 </template>

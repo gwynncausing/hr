@@ -13,5 +13,10 @@ export default defineNuxtConfig({
   piniaPersistedstate: {
     debug: true
   },
+  imports: {
+    dirs: [
+      './types'
+    ]
+  },
   devtools: { enabled: true }
 })
