@@ -10,7 +10,11 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxt/ui": "^2.14.0",
+    "@nuxtjs/tailwindcss": "^6.11.4",
+    "@types/yup": "^0.32.0",
     "nuxt": "^3.10.1",
+    "sass": "^1.71.1",
     "vue": "^3.4.15",
     "vue-router": "^4.2.5"
   }
