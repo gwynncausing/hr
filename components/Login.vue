@@ -18,6 +18,7 @@
 
 <script setup lang="ts">
 import { object, string, type InferType } from 'yup'
+import { useUserStore } from '@/stores/User'
 
 const schema = object({
   email: string().email('Invalid email').required('Email cannot be empty'),
@@ -38,7 +39,7 @@ const body = computed(() => ({
 }))
 // setPageLayout('login')
 
-// const userStore = useUserStore()
+const userStore = useUserStore()
 const { data, execute, error } = await useFetch('/api/login', {
   method: 'POST',
   watch: false,
@@ -47,7 +48,7 @@ const { data, execute, error } = await useFetch('/api/login', {
   onResponse({response}) {
     const data = response._data
     if(response.status === 200) {
-      // userStore.updateState(true);
+      userStore.updateState(true);
       const router = useRouter();
       router.go(0);
     }
